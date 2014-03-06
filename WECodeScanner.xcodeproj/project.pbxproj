@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		59159A4518C826D6006B524F /* DeviceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59159A4318C826D6006B524F /* DeviceModel.xcdatamodeld */; };
-		59159A4818C84B3C006B524F /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A4718C84B3C006B524F /* Device.m */; };
-		59159A4B18C84B3C006B524F /* DeviceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A4A18C84B3C006B524F /* DeviceDetails.m */; };
 		59159A8818C85B8C006B524F /* MagicalImportFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A5018C85B8C006B524F /* MagicalImportFunctions.m */; };
 		59159A8918C85B8C006B524F /* NSAttributeDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A5218C85B8C006B524F /* NSAttributeDescription+MagicalDataImport.m */; };
 		59159A8A18C85B8C006B524F /* NSEntityDescription+MagicalDataImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A5418C85B8C006B524F /* NSEntityDescription+MagicalDataImport.m */; };
@@ -37,6 +35,9 @@
 		59159AA018C85B8C006B524F /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A8318C85B8C006B524F /* MagicalRecord+ShorthandSupport.m */; };
 		59159AA118C85B8C006B524F /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 59159A8518C85B8C006B524F /* MagicalRecord.m */; };
 		59159AA318C85BA5006B524F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59159AA218C85BA5006B524F /* CoreData.framework */; };
+		593E48E118C8C47F009D885E /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 593E48E018C8C47F009D885E /* Device.m */; };
+		593E48E418C8C47F009D885E /* DeviceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 593E48E318C8C47F009D885E /* DeviceDetails.m */; };
+		593E48E618C8C878009D885E /* device.csv in Resources */ = {isa = PBXBuildFile; fileRef = 593E48E518C8C878009D885E /* device.csv */; };
 		5989E73018C819D0002B72F8 /* ERROR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5989E72F18C819D0002B72F8 /* ERROR.mp3 */; };
 		5989E73318C81D02002B72F8 /* JXDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5989E73218C81D02002B72F8 /* JXDeviceViewController.m */; };
 		7445617118083EE200CB9639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7445617018083EE200CB9639 /* Foundation.framework */; };
@@ -72,10 +73,6 @@
 
 /* Begin PBXFileReference section */
 		59159A4418C826D6006B524F /* DeviceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DeviceModel.xcdatamodel; sourceTree = "<group>"; };
-		59159A4618C84B3C006B524F /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
-		59159A4718C84B3C006B524F /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
-		59159A4918C84B3C006B524F /* DeviceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetails.h; sourceTree = "<group>"; };
-		59159A4A18C84B3C006B524F /* DeviceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetails.m; sourceTree = "<group>"; };
 		59159A4F18C85B8C006B524F /* MagicalImportFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalImportFunctions.h; sourceTree = "<group>"; };
 		59159A5018C85B8C006B524F /* MagicalImportFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalImportFunctions.m; sourceTree = "<group>"; };
 		59159A5118C85B8C006B524F /* NSAttributeDescription+MagicalDataImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributeDescription+MagicalDataImport.h"; sourceTree = "<group>"; };
@@ -131,6 +128,11 @@
 		59159A8618C85B8C006B524F /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		59159A8718C85B8C006B524F /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		59159AA218C85BA5006B524F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		593E48DF18C8C47F009D885E /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		593E48E018C8C47F009D885E /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		593E48E218C8C47F009D885E /* DeviceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetails.h; sourceTree = "<group>"; };
+		593E48E318C8C47F009D885E /* DeviceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetails.m; sourceTree = "<group>"; };
+		593E48E518C8C878009D885E /* device.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = device.csv; sourceTree = "<group>"; };
 		5989E72F18C819D0002B72F8 /* ERROR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ERROR.mp3; sourceTree = "<group>"; };
 		5989E73118C81D02002B72F8 /* JXDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXDeviceViewController.h; path = ../JXDeviceViewController.h; sourceTree = "<group>"; };
 		5989E73218C81D02002B72F8 /* JXDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXDeviceViewController.m; path = ../JXDeviceViewController.m; sourceTree = "<group>"; };
@@ -336,11 +338,11 @@
 				7445618918083EE200CB9639 /* WEViewController.m */,
 				5989E73118C81D02002B72F8 /* JXDeviceViewController.h */,
 				5989E73218C81D02002B72F8 /* JXDeviceViewController.m */,
+				593E48E218C8C47F009D885E /* DeviceDetails.h */,
+				593E48E318C8C47F009D885E /* DeviceDetails.m */,
+				593E48DF18C8C47F009D885E /* Device.h */,
+				593E48E018C8C47F009D885E /* Device.m */,
 				59159A4318C826D6006B524F /* DeviceModel.xcdatamodeld */,
-				59159A4918C84B3C006B524F /* DeviceDetails.h */,
-				59159A4A18C84B3C006B524F /* DeviceDetails.m */,
-				59159A4618C84B3C006B524F /* Device.h */,
-				59159A4718C84B3C006B524F /* Device.m */,
 				7445618B18083EE200CB9639 /* Images.xcassets */,
 				7445617718083EE200CB9639 /* Supporting Files */,
 			);
@@ -350,6 +352,7 @@
 		7445617718083EE200CB9639 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				593E48E518C8C878009D885E /* device.csv */,
 				7445617818083EE200CB9639 /* WECodeScanner-Info.plist */,
 				7445617918083EE200CB9639 /* InfoPlist.strings */,
 				7445617C18083EE200CB9639 /* main.m */,
@@ -474,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7445618718083EE200CB9639 /* Main_iPad.storyboard in Resources */,
+				593E48E618C8C878009D885E /* device.csv in Resources */,
 				5989E73018C819D0002B72F8 /* ERROR.mp3 in Resources */,
 				7445618C18083EE200CB9639 /* Images.xcassets in Resources */,
 				744561B2180BEB1000CB9639 /* BEEP.mp3 in Resources */,
@@ -502,10 +506,8 @@
 				59159A4518C826D6006B524F /* DeviceModel.xcdatamodeld in Sources */,
 				59159A9518C85B8C006B524F /* NSManagedObjectContext+MagicalRecord.m in Sources */,
 				59159A8F18C85B8C006B524F /* NSManagedObject+MagicalAggregation.m in Sources */,
-				59159A4B18C84B3C006B524F /* DeviceDetails.m in Sources */,
 				7445618118083EE200CB9639 /* WEAppDelegate.m in Sources */,
 				59159A8B18C85B8C006B524F /* NSNumber+MagicalDataImport.m in Sources */,
-				59159A4818C84B3C006B524F /* Device.m in Sources */,
 				59159A9D18C85B8C006B524F /* MagicalRecord+iCloud.m in Sources */,
 				59159A9118C85B8C006B524F /* NSManagedObject+MagicalFinders.m in Sources */,
 				59159A8818C85B8C006B524F /* MagicalImportFunctions.m in Sources */,
@@ -514,9 +516,11 @@
 				59159A9A18C85B8C006B524F /* NSPersistentStoreCoordinator+MagicalRecord.m in Sources */,
 				744561AD18083FE700CB9639 /* WECodeScannerMatchView.m in Sources */,
 				744561BD180BEB6400CB9639 /* WESoundHelper.m in Sources */,
+				593E48E418C8C47F009D885E /* DeviceDetails.m in Sources */,
 				59159A9218C85B8C006B524F /* NSManagedObject+MagicalRecord.m in Sources */,
 				59159A9018C85B8C006B524F /* NSManagedObject+MagicalDataImport.m in Sources */,
 				59159A8E18C85B8C006B524F /* NSString+MagicalDataImport.m in Sources */,
+				593E48E118C8C47F009D885E /* Device.m in Sources */,
 				59159A8A18C85B8C006B524F /* NSEntityDescription+MagicalDataImport.m in Sources */,
 				59159A9B18C85B8C006B524F /* MagicalRecord+Actions.m in Sources */,
 				59159A9318C85B8C006B524F /* NSManagedObject+MagicalRequests.m in Sources */,

@@ -7,12 +7,19 @@
 //
 
 #import "JXDeviceViewController.h"
+#import "Device.h"
+#import "DeviceDetails.h"
 
 @interface JXDeviceViewController ()
 
 @end
 
 @implementation JXDeviceViewController
+
+{
+    NSMutableArray *_deviceAttributeValues;
+    NSArray *_deviceAttributes;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,12 +33,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = self.device.deviceDetails.name;
+    
+    _deviceAttributes = @[@"安全编号", @"设备名称", @"设备分类", @"设备类型", @"制造商",
+                                  @"品牌", @"系列", @"型号", @"投运日期", @"售后到期时间", @"领用部门",
+                                  @"领用人", @"运维部门", @"运维负责人", @"安装地点", @"ip地址", @"所属网络"];
+    
+    _deviceAttributeValues = [[NSMutableArray alloc] initWithCapacity:20];
+    [_deviceAttributeValues addObject:self.device.code];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.name];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.classification];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.type];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.manufacturer];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.brand];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.series];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.model];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.since];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.expire];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.consumingDepartment];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.user];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.maintainingDepartment];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.maintainer];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.location];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.ip];
+    [_deviceAttributeValues addObject:self.device.deviceDetails.network];
+    
+    NSLog(@"Attribute: %lu", (unsigned long)[_deviceAttributes count]);
+    NSLog(@"AttributeValue: %lu", (unsigned long)[_deviceAttributeValues count]);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,26 +72,29 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 0;
+    return 17;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Attribute"];
     
-    // Configure the cell...
+    UILabel *attribute = (UILabel *)[cell viewWithTag:1000];
+    attribute.text = _deviceAttributes[indexPath.row];
+    
+    UILabel *value = (UILabel *)[cell viewWithTag:1001];
+    value.text = _deviceAttributeValues[indexPath.row];
+    
     
     return cell;
+}
+
+- (IBAction)scanner {
+    [self performSegueWithIdentifier:@"scannerDevice" sender:nil];
+    _deviceAttributes = nil;
+    _deviceAttributeValues = nil;
 }
 
 /*

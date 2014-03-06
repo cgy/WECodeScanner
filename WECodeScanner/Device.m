@@ -2,8 +2,8 @@
 //  Device.m
 //  WECodeScanner
 //
-//  Created by freshlhy on 3/5/14.
-//  Copyright (c) 2014 Werner IT Consultancy. All rights reserved.
+//  Created by freshlhy on 14-3-6.
+//  Copyright (c) 2014年 Werner IT Consultancy. All rights reserved.
 //
 
 #import "Device.h"

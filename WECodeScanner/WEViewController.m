@@ -22,6 +22,10 @@
 
 @implementation WEViewController
 
+{
+    Device *_scannedDevice;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,18 +78,18 @@
 
 - (void)scannerView:(WECodeScannerView *)scannerView didReadCode:(NSString*)code {
     NSLog(@"Scanned code: %@", code);
-    self.codeLabel.text = [NSString stringWithFormat:@"Scanned code: %@", code];
-    Device *device = [Device findFirstByAttribute:@"code" withValue:code];
-    if (device != nil) {
+    _scannedDevice = [Device findFirstByAttribute:@"code" withValue:code];
+    if (_scannedDevice != nil) {
         [self performSelector:@selector(beep) withObject:nil afterDelay:0.1];
         [self performSegueWithIdentifier:@"showDevice" sender:self];
     } else {
+        self.codeLabel.text = @"无此设备记录！";
         [self performSelector:@selector(error) withObject:nil afterDelay:0.1];
     }
 }
 
 - (void)scannerViewDidStartScanning:(WECodeScannerView *)scannerView {
-    self.codeLabel.text = @"Scanning...";
+    self.codeLabel.text = @"扫描中...";
 }
 
 - (void)scannerViewDidStopScanning:(WECodeScannerView *)scannerView {
@@ -95,9 +99,10 @@
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	JXDeviceViewController *upcoming = segue.destinationViewController;
     if ([[segue identifier] isEqualToString:@"showDevice"]) {
-        
+        UINavigationController *navigationController = segue.destinationViewController;
+        JXDeviceViewController *controller = (JXDeviceViewController *)navigationController.topViewController;
+        controller.device = _scannedDevice;
 	} else if ([segue.identifier isEqualToString:@""]) {
 		
 	}

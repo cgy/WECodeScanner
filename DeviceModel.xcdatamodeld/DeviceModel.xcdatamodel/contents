@@ -8,7 +8,7 @@
         <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="classification" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="consumingDepartment" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="expire" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="expire" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ip" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="maintainer" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,13 +18,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="network" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="series" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="since" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="since" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="user" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="device" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Device" inverseName="deviceDetails" inverseEntity="Device" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Device" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="DeviceDetails" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Device" positionX="0" positionY="0" width="128" height="88"/>
+        <element name="DeviceDetails" positionX="-36" positionY="222" width="128" height="300"/>
     </elements>
 </model>
