@@ -291,6 +291,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		593E48E718C8EE30009D885E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				593E48E518C8C878009D885E /* device.csv */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		7445616418083EE200CB9639 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +333,7 @@
 		7445617618083EE200CB9639 /* WECodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				593E48E718C8EE30009D885E /* Assets */,
 				59159A4C18C85B8C006B524F /* MagicalRecord */,
 				744561B0180BEAED00CB9639 /* Resources */,
 				744561A818083EF400CB9639 /* Implementation */,
@@ -352,7 +361,6 @@
 		7445617718083EE200CB9639 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				593E48E518C8C878009D885E /* device.csv */,
 				7445617818083EE200CB9639 /* WECodeScanner-Info.plist */,
 				7445617918083EE200CB9639 /* InfoPlist.strings */,
 				7445617C18083EE200CB9639 /* main.m */,
