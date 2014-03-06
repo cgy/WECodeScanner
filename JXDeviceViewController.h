@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Device;
 
 @interface JXDeviceViewController : UITableViewController
+
+@property (weak, nonatomic) Device *device;
 
 @end

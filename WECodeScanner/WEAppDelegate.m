@@ -8,12 +8,48 @@
 
 #import "WEAppDelegate.h"
 #import "WESoundHelper.h"
+#import "Device.h"
+#import "DeviceDetails.h"
 
 @implementation WEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"DeviceModel"];
+    // Setup App with prefilled Beer items.
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"MR_HasPrefilledDevices"]) {
+        // Create Blond Ale
+        Device *d1 = [Device createEntity];
+        d1.code  = @"181219709";
+        d1.deviceDetails = [DeviceDetails createEntity];
+        d1.deviceDetails.name = @"Windows台式机";
+        d1.deviceDetails.classification = @"终端设备";
+        d1.deviceDetails.type = @"台式机";
+        d1.deviceDetails.manufacturer = @"联想";
+        d1.deviceDetails.brand = @"LENOVO";
+        d1.deviceDetails.series = @"联想";
+        d1.deviceDetails.model = @"联想";
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+        NSDate *since = [dateFormatter dateFromString: @"2012-10-30"];
+        d1.deviceDetails.since = since;
+        NSDate *expire = [dateFormatter dateFromString:@"2015-10-07"];
+        d1.deviceDetails.expire = expire;
+        d1.deviceDetails.consumingDepartment = @"变电检修中心";
+        d1.deviceDetails.user = @"刘湖钰";
+        d1.deviceDetails.maintainingDepartment = @"变电检修中心";
+        d1.deviceDetails.maintainer = @"万意";
+        d1.deviceDetails.location = @"公司本部十一楼办公室";
+        d1.deviceDetails.ip = @"10.234.247.115";
+        d1.deviceDetails.network = @"内网";
+        
+        // Save Managed Object Context
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreWithCompletion:nil];
+        
+        // Set User Default to prevent another preload of data on startup.
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"MR_HasPrefilledDevices"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     return YES;
 }
 							

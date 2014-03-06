@@ -10,6 +10,8 @@
 #import "WECodeScannerView.h"
 #import "WESoundHelper.h"
 #import "JXDeviceViewController.h"
+#import "Device.h"
+#import "DeviceDetails.h"
 
 @interface WEViewController ()<WECodeScannerViewDelegate>
 
@@ -73,10 +75,13 @@
 - (void)scannerView:(WECodeScannerView *)scannerView didReadCode:(NSString*)code {
     NSLog(@"Scanned code: %@", code);
     self.codeLabel.text = [NSString stringWithFormat:@"Scanned code: %@", code];
-    
-    [self performSelector:@selector(beep) withObject:nil afterDelay:0.1];
-//    [self performSelector:@selector(error) withObject:nil afterDelay:0.1];
-    [self performSegueWithIdentifier:@"showDevice" sender:self];
+    Device *device = [Device findFirstByAttribute:@"code" withValue:@"181219709"];
+    if (device != nil) {
+        [self performSelector:@selector(beep) withObject:nil afterDelay:0.1];
+        [self performSegueWithIdentifier:@"showDevice" sender:self];
+    } else {
+        [self performSelector:@selector(error) withObject:nil afterDelay:0.1];
+    }
 }
 
 - (void)scannerViewDidStartScanning:(WECodeScannerView *)scannerView {
