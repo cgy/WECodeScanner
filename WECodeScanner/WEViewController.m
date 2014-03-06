@@ -9,6 +9,7 @@
 #import "WEViewController.h"
 #import "WECodeScannerView.h"
 #import "WESoundHelper.h"
+#import "JXDeviceViewController.h"
 
 @interface WEViewController ()<WECodeScannerViewDelegate>
 
@@ -74,6 +75,8 @@
     self.codeLabel.text = [NSString stringWithFormat:@"Scanned code: %@", code];
     
     [self performSelector:@selector(beep) withObject:nil afterDelay:0.1];
+//    [self performSelector:@selector(error) withObject:nil afterDelay:0.1];
+    [self performSegueWithIdentifier:@"showDevice" sender:self];
 }
 
 - (void)scannerViewDidStartScanning:(WECodeScannerView *)scannerView {
@@ -84,10 +87,25 @@
     
 }
 
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	JXDeviceViewController *upcoming = segue.destinationViewController;
+    if ([[segue identifier] isEqualToString:@"showDevice"]) {
+        
+	} else if ([segue.identifier isEqualToString:@""]) {
+		
+	}
+}
+
 #pragma mark - Private
 
 - (void)beep {
     [WESoundHelper playSoundFromFile:@"BEEP.mp3" fromBundle:[NSBundle mainBundle] asAlert:YES];
+}
+
+- (void)error {
+    [WESoundHelper playSoundFromFile:@"ERROR.mp3" fromBundle:[NSBundle mainBundle] asAlert:YES];
 }
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5989E73018C819D0002B72F8 /* ERROR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5989E72F18C819D0002B72F8 /* ERROR.mp3 */; };
+		5989E73318C81D02002B72F8 /* JXDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5989E73218C81D02002B72F8 /* JXDeviceViewController.m */; };
 		7445617118083EE200CB9639 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7445617018083EE200CB9639 /* Foundation.framework */; };
 		7445617318083EE200CB9639 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7445617218083EE200CB9639 /* CoreGraphics.framework */; };
 		7445617518083EE200CB9639 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7445617418083EE200CB9639 /* UIKit.framework */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5989E72F18C819D0002B72F8 /* ERROR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ERROR.mp3; sourceTree = "<group>"; };
+		5989E73118C81D02002B72F8 /* JXDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXDeviceViewController.h; path = ../JXDeviceViewController.h; sourceTree = "<group>"; };
+		5989E73218C81D02002B72F8 /* JXDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXDeviceViewController.m; path = ../JXDeviceViewController.m; sourceTree = "<group>"; };
 		7445616D18083EE200CB9639 /* WECodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WECodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7445617018083EE200CB9639 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7445617218083EE200CB9639 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +140,8 @@
 				744561BC180BEB6400CB9639 /* WESoundHelper.m */,
 				7445618818083EE200CB9639 /* WEViewController.h */,
 				7445618918083EE200CB9639 /* WEViewController.m */,
+				5989E73118C81D02002B72F8 /* JXDeviceViewController.h */,
+				5989E73218C81D02002B72F8 /* JXDeviceViewController.m */,
 				7445618B18083EE200CB9639 /* Images.xcassets */,
 				7445617718083EE200CB9639 /* Supporting Files */,
 			);
@@ -184,6 +191,7 @@
 		744561B0180BEAED00CB9639 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5989E72F18C819D0002B72F8 /* ERROR.mp3 */,
 				744561B1180BEB1000CB9639 /* BEEP.mp3 */,
 			);
 			name = Resources;
@@ -267,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7445618718083EE200CB9639 /* Main_iPad.storyboard in Resources */,
+				5989E73018C819D0002B72F8 /* ERROR.mp3 in Resources */,
 				7445618C18083EE200CB9639 /* Images.xcassets in Resources */,
 				744561B2180BEB1000CB9639 /* BEEP.mp3 in Resources */,
 				7445618418083EE200CB9639 /* Main_iPhone.storyboard in Resources */,
@@ -293,6 +302,7 @@
 				7445618118083EE200CB9639 /* WEAppDelegate.m in Sources */,
 				744561AD18083FE700CB9639 /* WECodeScannerMatchView.m in Sources */,
 				744561BD180BEB6400CB9639 /* WESoundHelper.m in Sources */,
+				5989E73318C81D02002B72F8 /* JXDeviceViewController.m in Sources */,
 				744561AE18083FE700CB9639 /* WECodeScannerView.m in Sources */,
 				7445617D18083EE200CB9639 /* main.m in Sources */,
 			);
