@@ -133,6 +133,7 @@
 		593E48E218C8C47F009D885E /* DeviceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetails.h; sourceTree = "<group>"; };
 		593E48E318C8C47F009D885E /* DeviceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetails.m; sourceTree = "<group>"; };
 		593E48E518C8C878009D885E /* device.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = device.csv; sourceTree = "<group>"; };
+		593E48EA18C8F675009D885E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5989E72F18C819D0002B72F8 /* ERROR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ERROR.mp3; sourceTree = "<group>"; };
 		5989E73118C81D02002B72F8 /* JXDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXDeviceViewController.h; path = ../JXDeviceViewController.h; sourceTree = "<group>"; };
 		5989E73218C81D02002B72F8 /* JXDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXDeviceViewController.m; path = ../JXDeviceViewController.m; sourceTree = "<group>"; };
@@ -579,6 +580,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7445618318083EE200CB9639 /* Base */,
+				593E48EA18C8F675009D885E /* en */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";

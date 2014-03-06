@@ -21,15 +21,6 @@
     NSArray *_deviceAttributes;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -89,12 +80,6 @@
     
     
     return cell;
-}
-
-- (IBAction)scanner {
-    [self performSegueWithIdentifier:@"scannerDevice" sender:nil];
-    _deviceAttributes = nil;
-    _deviceAttributeValues = nil;
 }
 
 /*

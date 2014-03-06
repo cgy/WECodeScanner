@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"请将摄像头对准二维码";
     
     CGFloat labelHeight = 60.0f;
     
@@ -100,8 +101,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDevice"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        JXDeviceViewController *controller = (JXDeviceViewController *)navigationController.topViewController;
+        JXDeviceViewController *controller = (JXDeviceViewController *)segue.destinationViewController;
+
         controller.device = _scannedDevice;
 	} else if ([segue.identifier isEqualToString:@""]) {
 		

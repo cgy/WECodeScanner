@@ -13,6 +13,4 @@
 
 @property (weak, nonatomic) Device *device;
 
-- (IBAction)scanner;
-
 @end
