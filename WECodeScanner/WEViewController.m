@@ -75,7 +75,7 @@
 - (void)scannerView:(WECodeScannerView *)scannerView didReadCode:(NSString*)code {
     NSLog(@"Scanned code: %@", code);
     self.codeLabel.text = [NSString stringWithFormat:@"Scanned code: %@", code];
-    Device *device = [Device findFirstByAttribute:@"code" withValue:@"181219709"];
+    Device *device = [Device findFirstByAttribute:@"code" withValue:code];
     if (device != nil) {
         [self performSelector:@selector(beep) withObject:nil afterDelay:0.1];
         [self performSegueWithIdentifier:@"showDevice" sender:self];
